@@ -2,6 +2,7 @@
 
 A real-time 3D terrain renderer with per-pixel Phong lighting. Built for my Computer Graphics course at UIC.
 
+![Main Demo](screenshots/main_demo.png)
 
 ---
 
@@ -24,7 +25,7 @@ The lighting is calculated per-pixel in the fragment shader using the Phong refl
 
 | Phong Shading | Normal Visualization |
 | --- | --- |
-
+| ![Phong Mode](screenshots/phong.png) | ![Normal Mode](screenshots/normal.png) |
 ---
 
 ## Technical Implementation
@@ -53,12 +54,6 @@ For each vertex shared by multiple triangles:
 2. Average all face normals at the vertex
 3. Normalize the result
 4. Apply proper transformation matrix (handles non-uniform scaling)
-
-### Why Index Buffers?
-Without index buffers, every triangle needs 3 separate vertices even if they share positions with adjacent triangles. With index buffers:
-- Vertices are stored once
-- Triangles reference vertex indices
-- Less memory, better performance
 
 ---
 
